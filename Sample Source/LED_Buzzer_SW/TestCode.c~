@@ -1,0 +1,44 @@
+/*****************************************************
+This program was produced by the
+CodeWizardAVR V2.05.0 Professional
+Automatic Program Generator
+© Copyright 1998-2010 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+Project : 
+Version : 
+Date    : 2011-07-28
+Author  : NeVaDa
+Company : 
+Comments: 
+
+
+Chip type               : ATmega128
+Program type            : Application
+AVR Core Clock frequency: 16.000000 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 1024
+*****************************************************/
+
+#include <mega128.h>
+
+// Standard Input/Output functions
+#include <stdio.h>
+
+// Declare your global variables here
+
+void main(void)
+{
+PORTG=0x00;
+DDRG=0x13;
+while (1)
+      {
+        if((PING&0X04)==0)
+         PORTG=0X01;    
+        else if((PING&0X08)==0)
+         PORTG=0X02;
+        else PORTG=0XF3;   
+
+      }
+}

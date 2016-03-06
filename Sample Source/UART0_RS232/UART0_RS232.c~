@@ -1,0 +1,46 @@
+/*****************************************************
+This program was produced by the
+CodeWizardAVR V2.05.0 Professional
+Automatic Program Generator
+© Copyright 1998-2010 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+Project : 
+Version : 
+Date    : 2011-07-28
+Author  : NeVaDa
+Company : 
+Comments: 
+
+
+Chip type               : ATmega128
+Program type            : Application
+AVR Core Clock frequency: 16.000000 MHz
+Memory model            : Small
+External RAM size       : 0
+Data Stack size         : 1024
+*****************************************************/
+
+#include <mega128.h>
+// Standard Input/Output functions
+#include <stdio.h>
+
+void main(void)
+{
+// USART0 initialization
+// Communication Parameters: 8 Data, 1 Stop, No Parity
+// USART0 Receiver: Off
+// USART0 Transmitter: On
+// USART0 Mode: Asynchronous
+// USART0 Baud Rate: 9600
+UCSR0A=0x00;
+UCSR0B=0x08;
+UCSR0C=0x06;
+UBRR0H=0x00;
+UBRR0L=0x67;
+while (1)
+      {
+        printf("LK-ATmega128-C RS232 Com Test\r\n");
+
+      }
+}

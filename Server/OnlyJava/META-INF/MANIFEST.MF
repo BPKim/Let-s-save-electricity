@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OnlyJava
+Bundle-SymbolicName: OnlyJava
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: onlyjava.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ gnu.io.rxtx;bundle-version="2.1.7"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

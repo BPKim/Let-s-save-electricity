@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <!-- TAB 1 -->
+
+                <AbsoluteLayout
+                    android:id="@+id/tabs1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" 
+                    android:orientation="vertical">
+
+                    <AbsoluteLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/title" />
+
+                            <ImageView
+                                android:id="@+id/homeimage"
+                                android:layout_width="183dp"
+                                android:layout_height="183dp"
+                                android:layout_x="76dp"
+                                android:layout_y="91dp"
+                                android:src="@drawable/home" />
+
+                    </AbsoluteLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="134dp"
+                        android:layout_y="346dp"
+                        android:lineSpacingExtra="10dip"
+                        android:text="1130 원(주택용)"
+                        android:textSize="23dip" />
+
+                    <TextView
+                        android:id="@+id/electr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="8dp"
+                        android:layout_y="297dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="10dip"
+                        android:paddingLeft="28dip"
+                        android:text="사용한 전기량  : 9kW/h"
+                        android:textSize="23dip" />
+
+                    <ImageView
+                        android:id="@+id/moneyimage"
+                        android:layout_width="116dp"
+                        android:layout_height="80dp"
+                        android:layout_x="20dp"
+                        android:layout_y="322dp"
+                        android:paddingLeft="30dip"
+                        android:src="@drawable/money" />
+
+                </AbsoluteLayout>
+
+                <!-- TAB 2 -->
+
+                <LinearLayout
+                    android:id="@+id/tabs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    
+<VideoView
+    android:id="@+id/VideoView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/light"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:lineSpacingExtra="10dip"
+                            android:paddingLeft="30dp"
+                            android:src="@drawable/light" />
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/light"
+                            android:gravity="center"
+                            android:lineSpacingExtra="10dip"
+                            android:text="스탠드"
+                            android:textSize="20dip" />
+
+                        <ToggleButton
+                            android:id="@+id/toggle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/text1" 
+                            android:textOn="ON"
+                            android:textOff="OFF"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/computer"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/light"
+                            android:lineSpacingExtra="10dip"
+                            android:paddingLeft="30dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/computer" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text1"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/computer"
+                            android:lineSpacingExtra="10dip"
+                            android:text="컴퓨터"
+                            android:textSize="20dip" />
+
+                        <ToggleButton
+                            android:id="@+id/toggle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/toggle1"
+                            android:layout_toRightOf="@id/text2"
+                            android:textOn="ON"
+                            android:textOff="OFF" />
+                            
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/fan"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/computer"
+                            android:lineSpacingExtra="10dip"
+                            android:paddingLeft="30dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/fan" />
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text2"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/fan"
+                            android:text="선풍기"
+                            android:textSize="20dip" />
+
+                        <ToggleButton
+                            android:id="@+id/toggle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/toggle2"
+                            android:layout_toRightOf="@id/text3" 
+                            android:textOn="ON"
+                            android:textOff="OFF"/>
+                            
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- TAB 3 -->
+
+                <LinearLayout
+                    android:id="@+id/tabs3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/earth"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@id/earth"
+                            android:layout_gravity="left"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/earth" />
+
+                        <ImageView
+                            android:id="@+id/box3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@id/earth"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/box3" />
+                    </RelativeLayout>
+
+                    <!-- 텍스트 -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:lineSpacingExtra="10dip"
+                        android:paddingLeft="20dip"
+                        android:text="공공장소에서 "
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 냉난방중인 장소 문 닫기"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 실내를 밝은 색으로 꾸미기"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:lineSpacingExtra="10dip"
+                        android:paddingLeft="35dip"
+                        android:text="* 전력 피크 시간대에 전기사용 최대한 자제"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dip"
+                        android:text="우리가정에서"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 빨래감은 모아서 한번에 하기"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 냉장고 용량의 60% 정도만 채우기"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 선풍기 바람 방향은 자연풍과 같은 방향으로"
+                        android:textSize="15dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="35dip"
+                        android:text="* 가전제품 구입 시에는 1등급으로!!"
+                        android:textSize="15dip" 
+                        android:lineSpacingExtra="30dip"/>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/thth" />
+                    
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
